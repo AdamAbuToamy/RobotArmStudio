@@ -1,5 +1,7 @@
 # Robot Arm Studio
 
+> **Work in progress — active personal project.** Hardware, software and testing are still being developed.
+
 ![The real robot and its controller](docs/media/robot-and-controller.jpg)
 
 *Actual hardware demonstration recorded on 10 October 2026; the screen shows the interface used at that time.*
