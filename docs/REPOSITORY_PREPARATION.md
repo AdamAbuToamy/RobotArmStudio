@@ -5,13 +5,13 @@ Recovered source: `RobotArmStudio_v43.zip`, `GitHub_Ready/` directory. The expor
 - Firmware and application source retained without functional edits.
 - Original purchased STEP/STL/mesh assets and local runtime data excluded.
 - FABRI_CREATOR attribution retained; moved to a compact credit section in the English overview.
-- Update, 1 November 2026: actual build footage was recovered from the two supplied Album 16 archives; selected stills, a motion GIF and two compact videos are bundled.
+- Update, 1 November 2026: actual build footage was recovered from the two supplied Album 16 archives; only the unchanged owner-supplied original video is included.
 - A similarly named robot-update video was inspected and excluded: it shows NEMA stepper motors and magnetic encoders, not evidence of this servo-arm build.
 - Camera mount V9 CAD was recovered for review, but is not bundled: reference and derived-geometry redistribution rights need checking before public release.
 - No physical hardware or firmware compilation validation was performed during repository preparation.
 - The 25 October test report remains a historical report, not a new test claim.
 
-Real build views and movement demonstrations are now included. A dedicated current wiring close-up and confirmation of any software newer than v43 remain useful.
+Only original owner-supplied media is used. A dedicated current wiring close-up and confirmation of any software newer than v43 remain useful.
 
 ## Checks run on 31 October
 
