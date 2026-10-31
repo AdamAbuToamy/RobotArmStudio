@@ -1,0 +1,18 @@
+Original user model: Brazo Robótivo 2023 v144.stl
+From: Robot arm(2).zip / Robot arm/
+SHA256: b95b6074c26eb677847676797a556e82f4ffd9bbd9b53c92bc7a9d66c0a32303
+Original file copied unchanged as Robot_Original.stl.
+181170 source triangles, grouped into 19 connected mesh components. No decimation.
+Positions normalized to millimetres, right-handed Z-up:
+X = sourceX - 40.779
+Y = -(sourceZ - 92.88)
+Z = sourceY - 36.3575741078677
+GPU coordinates use float32; source conversion max error tested <0.0001mm.
+GPU normals are quantized for shading only; geometry is not simplified.
+Joint axes were read from the matching assembly STEP cylindrical surfaces.
+metadata.json records axes, source bounds, part grouping and finger linkage reference.
+The source STEP/STL reference pose is not automatically the robot's servo home pose.
+Electronics, cables and subsequently designed printed additions are not in this original STL.
+
+Original mechanical design: FABRI_CREATOR, Cults3D design 1896360.
+Public export excludes the original exact mesh; see ATTRIBUTION.md.
