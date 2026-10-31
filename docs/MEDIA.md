@@ -10,4 +10,4 @@ The launcher creates an owner credential. Phone links and PIN pairing return a d
 
 Use verified photos of Adam's build. Copy only selected public files to docs/media/ in the exported source, and link them from both READMEs. The export excludes the local media directory, database and session credentials. Keep private files and purchased CAD out of the public repository.
 
-No actual build photos or videos are bundled yet.
+Actual October build footage is now bundled under docs/media/. See [media sources](MEDIA_SOURCES.md). Repository media is linked from the READMEs; it is not automatically imported into the local application gallery.
