@@ -1,0 +1,14 @@
+# Hardware setup
+
+1. Wire and verify the ESP32-S3 / PCA9685 I²C connection and the servo power distribution. Use a common signal/power ground.
+2. Confirm the servo-to-channel assignment in `RobotArmStudio/RobotArmStudio.ino` against the physical arm. The current protocol handles six channels.
+3. Upload the included firmware for first-time setup. Its original project expects **USB CDC On Boot disabled** for the UART USB port in use.
+4. Open the local bridge and select the board's USB port. Close any Serial Monitor that holds the same port.
+5. Support the arm before first initialization. Start with tested pulse limits and avoid mechanical hard stops.
+6. In Settings, review joint limits, holding behavior and model calibration. Calibration is a command model; the hardware has no joint encoders in this configuration.
+
+The UI redesign does not require a new firmware flash when the bundled v20 protocol is already working. Back up your current `data` folder before replacing application files. Do not replace your saved calibration with another robot's values.
+
+The global software Stop is not a physical emergency-stop circuit and disconnecting the browser does not necessarily remove servo power. Holding or releasing a loaded joint changes its physical behavior.
+
+Phone access is an in-app option. Start the regular application once, click Phone in the header, and scan its QR code. No additional phone server is started manually. Turning sharing off stops the LAN listener and stops/closes an active phone controller, while the computer app stays available. Windows may ask to allow the Python application on a private network on first use.
