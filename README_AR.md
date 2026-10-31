@@ -1,5 +1,7 @@
 # Robot Arm Studio
 
+> **قيد التطوير — مشروع شخصي مستمر.** ما زال العمل جاريًا على العتاد والبرمجيات والاختبارات.
+
 ![الروبوت الحقيقي مع واجهة التحكم](docs/media/robot-and-controller.jpg)
 
 ![حركة الروبوت الفعلية](docs/media/robot-control.gif)
