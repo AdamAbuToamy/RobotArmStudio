@@ -2,15 +2,13 @@
 
 > **Work in progress — active personal project.** Hardware, software and testing are still being developed.
 
-![The real robot and its controller](docs/media/robot-and-controller.jpg)
 
-*Actual hardware demonstration recorded on 10 October 2026; the screen shows the interface used at that time.*
 
-![Real robot motion demonstration](docs/media/robot-control.gif)
 
-[Watch the control demo](docs/media/robot-control-demo.mp4) · [Watch the later motion demo](docs/media/robot-motion-demo.mp4)
 
 **Work in progress.** A physical 3D-printed robot-arm project by **Adam Abu Toamy**.
+
+[Original, unmodified robot video](docs/media/VID-20261010-WA0009.mp4)
 
 [العربية](README_AR.md) · [Architecture](docs/ARCHITECTURE.md) · [Roadmap](docs/ROADMAP.md) · [Validation](TESTING.md)
 
@@ -106,7 +104,6 @@ The **Phone** action in the header manages optional LAN access. The **Stop / Esc
 
 The **owner session opened by START_WINDOWS.bat on the local computer** can add and delete build photos/videos from Project. A separate controller credential is issued to paired phones; those sessions can view the gallery but cannot change it. Uploads and deletions are checked by the server, not just hidden in the interface. Files are saved in `data/project-media/`. Direct-file mode has no media editor. Uploaded filenames are captions; videos use native controls.
 
-Selected actual build footage is now bundled in `docs/media/`. The stills and GIF are extracted from the supplied October recordings; they are not rendered robot images. [Media provenance](docs/MEDIA_SOURCES.md) records filenames and extraction times. The local application gallery is separate from these repository assets.
 
 To prepare public media for GitHub after adding your own files, see [media publishing](docs/MEDIA.md). Local project data, pairing tokens and private model assets are excluded from the software export.
 
