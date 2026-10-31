@@ -1,0 +1,20 @@
+Robot Arm Studio — Interface 43
+
+العربية
+1. احتفظ بمجلد data من نسختك الحالية؛ استبدل ملفات البرنامج ثم أعد هذا المجلد.
+2. شغّل START_WINDOWS.bat، أو python server.py من بيئة Python المثبتة.
+3. افتح الرابط المحلي الذي يظهر تلقائيًا. اختر منفذ USB واستلم التحكم.
+4. للهاتف: اضغط زر الهاتف داخل الموقع، ثم امسح QR. لا تشغّل سيرفر إضافيًا.
+   أوقف الوصول من إيقاف مشاركة الهاتف؛ يبقى التطبيق المحلي متاحًا.
+5. اختر English أو العربية من أعلى الموقع. زر Esc يوقف الحركة.
+6. لا تحتاج رفع برنامج اللوحة إذا كان إصدار البروتوكول v20 الحالي يعمل.
+7. إضافة الصور وحذفها من جلسة الكمبيوتر المحلية فقط؛ الهاتف يعرض المعرض دون تعديل.
+8. التوثيق README_AR.md يشرح المشروع والتعديلات ومصدر ملف الطباعة المشترى.
+
+English
+Preserve your existing data folder, replace the application files, then start START_WINDOWS.bat.
+The Phone action inside the website manages optional phone sharing; no separate phone server command is needed.
+Use README.md for hardware, operation and project status. This is a work-in-progress prototype, not a hardware-validated release.
+
+GitHub
+Use the separate GitHub_Ready copy or tools/export_github.py. It omits the original purchased model data and private runtime files.

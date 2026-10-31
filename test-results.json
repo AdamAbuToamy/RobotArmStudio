@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-25T12:18:09.939Z",
+  "transport": "mocked; no physical serial port opened",
+  "checks": [
+    {
+      "name": "Disconnected UI loads with no automatic activation",
+      "status": "passed"
+    },
+    {
+      "name": "Light interface restores six rendered, selectable joint diagrams",
+      "status": "passed"
+    },
+    {
+      "name": "Every page renders in English and Arabic without overflow",
+      "status": "passed"
+    },
+    {
+      "name": "Everyday controls hide engineering readouts and keep tuning in closed advanced settings",
+      "status": "passed"
+    },
+    {
+      "name": "Project identifies the purchased-model designer near the introduction and explains the build",
+      "status": "passed"
+    },
+    {
+      "name": "Sketch workspace retains source geometry and supports picking and camera rotation",
+      "status": "passed"
+    },
+    {
+      "name": "Subtle page animation respects reduced-motion preferences",
+      "status": "passed"
+    },
+    {
+      "name": "Phone access starts and stops from the website without a second server command",
+      "status": "passed"
+    },
+    {
+      "name": "Language changes preserve an unsaved calibration input",
+      "status": "passed"
+    },
+    {
+      "name": "Connect and explicitly activate through mocked protocol",
+      "status": "passed"
+    },
+    {
+      "name": "Pointer release, Escape and page changes stop manual movement",
+      "status": "passed"
+    },
+    {
+      "name": "Capture, rename, save, edit, reload and replay a routine",
+      "status": "passed"
+    },
+    {
+      "name": "Physical-media gallery upload persists and requires authorization",
+      "status": "passed"
+    },
+    {
+      "name": "Paired visitors see the gallery without upload or delete controls",
+      "status": "passed"
+    },
+    {
+      "name": "Phone layout keeps Stop visible and has no horizontal scrolling",
+      "status": "passed"
+    },
+    {
+      "name": "No uncaught browser errors",
+      "status": "passed"
+    }
+  ]
+}

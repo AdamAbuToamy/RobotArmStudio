@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-25",
+  "baseline": "RobotArmStudio_XYZ_Fix39.zip",
+  "hardware_tested": false,
+  "unchanged_control_sources": {
+    "RobotArmStudio/RobotArmStudio.ino": {
+      "unchanged": true,
+      "sha256": "f9bae8f62288158abc8f4bac8a13a08aa9b6ee737794eeaf0a804834884e5a8e"
+    },
+    "kinematics.js": {
+      "unchanged": true,
+      "sha256": "41c9ec953e3902c994c0d9373bfc00d75df375448641d20afd1e67bcac62fcec"
+    },
+    "planner.js": {
+      "unchanged": true,
+      "sha256": "2dbb7a4899274a01b13e8b699bd13445b21489c60a7370b4521883468757f4bb"
+    }
+  },
+  "public_export_excludes_original_geometry_and_private_data": true,
+  "project_media_bundled": false,
+  "interface_version": 43,
+  "browser_checks_passed": 16,
+  "visual_changes": "Everyday controls without pulse/channel/range readouts; advanced tuning in closed settings; detailed bilingual story and visible FABRI_CREATOR source credit; sketch surface and feature-edge styling over unchanged original triangles.",
+  "server_checks_passed": 8,
+  "media_roles": {
+    "owner": "launcher credential on local desktop",
+    "paired_devices": "view media; mutations rejected",
+    "lan_listener": "media mutations always rejected"
+  },
+  "original_model_and_motion_sources": {
+    "kinematics.js": {
+      "unchanged": true,
+      "sha256": "41c9ec953e3902c994c0d9373bfc00d75df375448641d20afd1e67bcac62fcec"
+    },
+    "planner.js": {
+      "unchanged": true,
+      "sha256": "2dbb7a4899274a01b13e8b699bd13445b21489c60a7370b4521883468757f4bb"
+    },
+    "RobotArmStudio/RobotArmStudio.ino": {
+      "unchanged": true,
+      "sha256": "f9bae8f62288158abc8f4bac8a13a08aa9b6ee737794eeaf0a804834884e5a8e"
+    }
+  }
+}

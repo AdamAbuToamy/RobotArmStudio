@@ -1,0 +1,18 @@
+data/
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+*.db
+*.db-wal
+*.db-shm
+.env
+.env.*
+# The creator's original model is private and is not redistributed.
+stl-meshes.js
+model/Robot_Original.stl
+*.step
+*.stl
+*.3mf
+test-results/
+playwright-report/

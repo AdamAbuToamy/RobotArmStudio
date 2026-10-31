@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f4ee">
+<title>Robot Arm Studio — Adam Abu Toamy</title>
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="interface.css?v=43">
+</head>
+<body>
+<a class="skip-link" href="#mainContent">انتقل للمحتوى</a>
+<aside class="sidebar">
+<a class="brand" href="#control">
+<span class="brand-icon">
+<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M9 40h29M16 39v-7l11-13-9-8M20 7l-5 3 4 5M30 16l6 3 3-4-3-3M29 23l4 12v4H20">
+</path>
+<circle cx="27" cy="20" r="5" fill="#e0e9d4">
+</circle>
+<circle cx="17" cy="32" r="3" fill="#e0e9d4">
+</circle>
+<path d="M5 45h38" stroke="#c0cdb1">
+</path>
+</svg>
+</span>
+<div>
+<strong>ARM STUDIO</strong>
+<small>ADAM ABU TOAMY</small>
+</div>
+</a>
+<nav aria-label="الصفحات">
+<button data-page="control" class="nav-item">
+<span aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<rect x="3" y="3" width="7" height="7" rx="2">
+</rect>
+<rect x="14" y="3" width="7" height="7" rx="2">
+</rect>
+<rect x="3" y="14" width="7" height="7" rx="2">
+</rect>
+<path d="M14 17.5h7m-3.5-3.5v7">
+</path>
+</svg>
+</span>
+<b>التحكم</b>
+</button>
+<button data-page="simulation" class="nav-item">
+<span aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 9 5-9 5-9-5 9-5Zm-9 5v10l9 5 9-5V7M12 12v10">
+</path>
+</svg>
+</span>
+<b>المحاكاة</b>
+</button>
+<button data-page="library" class="nav-item">
+<span aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M5 5h14v14H5z">
+</path>
+<path d="m10 8 6 4-6 4V8Z">
+</path>
+</svg>
+</span>
+<b>الحركات</b>
+</button>
+<button data-page="settings" class="nav-item">
+<span aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M5 3v18M12 3v18M19 3v18">
+</path>
+<rect x="2.5" y="7" width="5" height="4" rx="1" fill="#eef0e5">
+</rect>
+<rect x="9.5" y="14" width="5" height="4" rx="1" fill="#eef0e5">
+</rect>
+<rect x="16.5" y="5" width="5" height="4" rx="1" fill="#eef0e5">
+</rect>
+</svg>
+</span>
+<b>الإعدادات</b>
+</button>
+<button data-page="project" class="nav-item">
+<span aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M5 8h14v13H5zM8 8V4h8v4M9 12h6M9 16h4">
+</path>
+</svg>
+</span>
+<b>المشروع</b>
+</button>
+</nav>
+<div class="sidebar-bottom">
+<span class="wip">قيد التطوير</span>
+<p>Robot Arm Studio / 43</p>
+</div>
+</aside>
+<div class="app-shell">
+<header class="topbar">
+<div class="connection-group">
+<span id="badge" class="badge">● غير متصل</span>
+<select id="usbPort" aria-label="منفذ USB" hidden="">
+</select>
+<button id="refreshPorts" title="تحديث المنافذ" hidden="">↻</button>
+<button id="connect" class="primary">اتصال USB</button>
+<button id="disconnect" disabled="">فصل</button>
+</div>
+<div class="topbar-actions">
+<button id="phoneAccess">الهاتف</button>
+<select id="languageSelect" aria-label="اللغة">
+<option value="en">English</option>
+<option value="ar">العربية</option>
+</select>
+<button id="stop" class="stop-button" disabled="">■ إيقاف <kbd>Esc</kbd>
+</button>
+</div>
+</header>
+<main id="mainContent">
+<div id="status" role="status" aria-live="polite" hidden="">
+</div>
+<section id="page-control" class="page">
+<div class="page-heading">
+<div>
+
+<h1>التحكم المباشر</h1>
+</div>
+
+</div>
+<div class="control-layout">
+<section class="panel axes-panel">
+<div class="panel-heading">
+<h2>المفاصل</h2>
+</div>
+<div class="axis-list">
+<div id="view0" class="axis-tile">
+<button id="joint0" class="axis-button">
+<span class="axis-index">01</span>
+<canvas class="joint-canvas" aria-hidden="true">
+</canvas>
+<span class="axis-info">
+<b>القاعدة</b>
+<small id="a0">غير متصل</small>
+</span>
+</button>
+</div>
+<div id="view1" class="axis-tile">
+<button id="joint1" class="axis-button">
+<span class="axis-index">02</span>
+<canvas class="joint-canvas" aria-hidden="true">
+</canvas>
+<span class="axis-info">
+<b>الكتف</b>
+<small id="a1">غير متصل</small>
+</span>
+</button>
+</div>
+<div id="view2" class="axis-tile">
+<button id="joint2" class="axis-button">
+<span class="axis-index">03</span>
+<canvas class="joint-canvas" aria-hidden="true">
+</canvas>
+<span class="axis-info">
+<b>الكوع</b>
+<small id="a2">غير متصل</small>
+</span>
+</button>
+</div>
+<div id="view3" class="axis-tile">
+<button id="joint3" class="axis-button">
+<span class="axis-index">04</span>
+<canvas class="joint-canvas" aria-hidden="true">
+</canvas>
+<span class="axis-info">
+<b>إمالة الرسغ</b>
+<small id="a3">غير متصل</small>
+</span>
+</button>
+</div>
+<div id="view4" class="axis-tile">
+<button id="joint4" class="axis-button">
+<span class="axis-index">05</span>
+<canvas class="joint-canvas" aria-hidden="true">
+</canvas>
+<span class="axis-info">
+<b>دوران المقبض</b>
+<small id="a4">غير متصل</small>
+</span>
+</button>
+</div>
+<div id="view5" class="axis-tile">
+<button id="joint5" class="axis-button">
+<span class="axis-index">06</span>
+<canvas class="joint-canvas" aria-hidden="true">
+</canvas>
+<span class="axis-info">
+<b>الأصابع</b>
+<small id="a5">غير متصل</small>
+</span>
+</button>
+</div>
+</div>
+</section>
+<section class="panel motion-panel">
+<div class="panel-heading">
+<h2 id="jointTitle">القاعدة</h2>
+
+</div>
+<div class="activation">
+<button id="armAll" disabled="" class="primary">تفعيل الذراع</button>
+<button id="center" disabled="">وضع البداية</button>
+</div>
+<label class="control-label">السرعة</label>
+<div class="speeds segmented">
+<button data-speed="100">هادئة</button>
+<button data-speed="250">متوسطة</button>
+<button data-speed="450" class="selected">سريعة</button>
+<button id="manualToggle" aria-expanded="false" aria-controls="manualSpeed" aria-pressed="false">مخصصة</button>
+</div>
+<div id="manualSpeed" class="range-box" hidden="">
+<div class="row between">
+<label for="speedSlider">سرعة المفصل</label>
+<output id="speedValue" dir="ltr">450 µs/s</output>
+</div>
+<input id="speedSlider" type="range" min="50" max="4000" step="50" value="450">
+<span id="speedCap" class="mono" hidden="">4000 µs/s</span>
+</div>
+<div class="mode-switch segmented">
+<button data-jog-mode="joint" class="selected">المفصل المحدد</button>
+<button data-jog-mode="dual">محوران معًا</button>
+</div>
+<div id="singleJog">
+<div class="directions">
+<button id="left" class="drive" disabled="">↶ اتجاه 1</button>
+<button id="right" class="drive" disabled="">اتجاه 2 ↷</button>
+</div>
+
+</div>
+<div id="dualJog" hidden="">
+<div class="dpad">
+<button data-arrow="ArrowUp" aria-label="أعلى">↑</button>
+<button data-arrow="ArrowLeft" aria-label="يسار">←</button>
+<button data-arrow="ArrowDown" aria-label="أسفل">↓</button>
+<button data-arrow="ArrowRight" aria-label="يمين">→</button>
+</div>
+<div class="keyboard-strip">
+<span id="mappingLR">
+</span>
+<span id="mappingUD">
+</span>
+<button id="cycleAxis">تبديل المحور</button>
+</div>
+</div>
+<div class="capture-bar">
+<button id="capture" disabled="">+ حفظ وضعية</button>
+</div>
+</section>
+<section class="panel grip-panel">
+<div class="panel-heading">
+<h2>المقبض</h2>
+
+</div>
+<div class="grip-symbol" aria-hidden="true">
+<svg viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<circle cx="45" cy="43" r="31" fill="#f5e3bb" stroke="none">
+</circle>
+<path d="M31 69h28M36 68l-9-23V23h12M54 68l9-23V23H51">
+</path>
+<path d="M28 44h10m14 0h10M45 69v9">
+</path>
+<circle cx="28" cy="44" r="5" fill="#fbf0de">
+</circle>
+<circle cx="62" cy="44" r="5" fill="#fbf0de">
+</circle>
+</svg>
+</div>
+<div class="stack">
+<button id="grip" class="primary" disabled="">إمساك</button>
+<button id="openFast" disabled="">فتح</button>
+</div>
+
+</section>
+</div>
+</section>
+<section id="page-simulation" class="page workspace-page" hidden="">
+<div class="workspace-layout">
+<section class="panel xyz-card">
+<div class="row">
+<h2>مساحة الحركة</h2>
+<button id="xyzFront">أمامي</button>
+<button id="xyzSide">جانبي</button>
+<button id="xyzTop">علوي</button>
+<button id="xyzReset">منظور</button>
+<span class="preview-kind" id="previewKindBadge" hidden="">عرض توضيحي</span>
+</div>
+<div id="xyzStage">
+<canvas id="stlCanvas" aria-label="الروبوت من STL داخل مساحة XYZ">
+</canvas>
+<span id="xyzAxisX" class="xyz-axis">X</span>
+<span id="xyzAxisY" class="xyz-axis">Y</span>
+<span id="xyzAxisZ" class="xyz-axis">Z</span>
+<div id="xyzHud" hidden="">mm</div>
+</div>
+<details id="xyzDiagnostic" hidden="">
+<summary>تشخيص الوصول · 39</summary>
+<pre id="xyzDiagnosticText" dir="ltr" style="white-space:pre-wrap;user-select:text">
+</pre>
+</details>
+<p id="xyzStatus" class="note" role="status" hidden="">
+</p>
+</section>
+<aside class="xyz-target">
+<h2>نقطة الهدف</h2>
+
+<div class="row">
+<button id="xyzArm">وضع البداية</button>
+<button id="xyzPreview">معاينة</button>
+<button id="xyzGo" class="primary" disabled="">انتقال</button>
+<button id="xyzStop" class="danger" hidden="">■ إيقاف</button>
+</div>
+<details class="position-options" id="positionOptions">
+<summary>خيارات متقدمة</summary>
+<div class="xyz-controls">
+<label>مستوى الاختيار<select id="xyzPlane">
+<option value="z">XY · ارتفاع Z</option>
+<option value="y">XZ · عمق Y</option>
+<option value="x">YZ · موضع X</option>
+</select>
+</label>
+<label class="xyz-depth">المستوى <b id="xyzSliceValue">200 mm</b>
+<input id="xyzSlice" type="range" min="0" max="500" value="200" step="1">
+</label>
+<label>X<input id="xyzX" type="number" step="1" value="130" min="-400" max="400">
+</label>
+<label>Y<input id="xyzY" type="number" step="1" value="65" min="-400" max="400">
+</label>
+<label>Z<input id="xyzZ" type="number" step="1" value="200" min="0" max="500">
+</label>
+</div>
+<label>زمن مطلوب / ث<input id="xyzDuration" type="number" min="2" max="30" step="1" value="6">
+</label>
+<label>
+<input id="xyzAutoWrist" type="checkbox" checked=""> إعادة توجيه الرسغ تلقائيًا</label>
+<label>
+<input id="xyzHold" type="checkbox"> تثبيت الحمل</label>
+<span id="xyzModelStatus" class="muted">جارٍ تحميل نموذج STL…</span>
+</details>
+</aside>
+</div>
+<canvas id="robotCanvas" hidden="">
+</canvas>
+<div hidden="">
+<button id="viewFront">
+</button>
+<button id="viewSide">
+</button>
+<button id="viewReset">
+</button>
+<input id="simFollow" type="checkbox" checked="">
+<button id="simStop">
+</button>
+<span id="simState">
+</span>
+</div>
+</section>
+<section id="page-library" class="page" hidden="">
+<section class="panel">
+<div class="row">
+<h2>حركاتي</h2>
+<button id="newRoutine" class="primary">+ حركة جديدة</button>
+</div>
+<div id="libraryCards" class="library-grid">
+</div>
+</section>
+</section>
+<section id="page-editor" class="page" hidden="">
+<div class="page-heading">
+<button data-page="library">← الحركات المحفوظة</button>
+<span class="caption">محرّر الحركات</span>
+</div>
+<section class="panel">
+<div class="row">
+<h2>محرّر الحركات</h2>
+<span id="sequenceStatus">0 وضعيات</span>
+</div>
+<div class="routineBar editor">
+<input id="routineName" maxlength="60" placeholder="اسم الحركة" aria-label="اسم الحركة">
+<button id="save">حفظ الحركة</button>
+<select id="saved" aria-label="الحركات المحفوظة">
+<option value="">الحركات المحفوظة…</option>
+</select>
+<button id="load">تحميل</button>
+</div>
+<div class="field">
+<label for="pathMode">طريقة الانتقال</label>
+<select id="pathMode">
+<option value="flow">انسيابي</option>
+<option value="pauses">مع توقف</option>
+<option value="steps">خطوة بخطوة</option>
+</select>
+</div>
+<div class="manual-speed">
+<div class="speed-heading">
+<label for="playbackRate">سرعة الحركات المحفوظة</label>
+<output id="playbackRateValue" for="playbackRate" dir="ltr">1×</output>
+</div>
+<input id="playbackRate" type="range" min="0.25" max="4" step="0.25" value="1" aria-label="سرعة تشغيل الحركات المحفوظة">
+<div class="row">
+</div>
+<p>
+<label>
+<input id="scalePauses" type="checkbox"> تغيير سرعة الوقفات أيضًا</label>
+</p>
+</div>
+<ol id="poses" class="poses">
+</ol>
+<div id="empty" class="empty">لا توجد وضعيات.</div>
+<div class="toolbar" style="margin-top:18px">
+<button id="play" class="primary" disabled="">▶ تشغيل</button>
+<button id="clear">مسح القائمة</button>
+<button id="export">تصدير</button>
+<button id="import">استيراد</button>
+<input id="importFile" type="file" accept=".json,application/json" hidden="">
+</div>
+</section>
+</section>
+<section id="page-settings" class="page settings-page" hidden="">
+<div class="page-heading">
+<h1>الإعدادات</h1>
+</div>
+
+
+
+<div class="settings-grid settings-basic">
+<section class="panel">
+<h2>لوحة المفاتيح</h2>
+
+<label class="field">← → / A D<select id="keyLR">
+</select>
+</label>
+<label>
+<input id="reverseLR" type="checkbox"> عكس اليمين واليسار</label>
+<h3>↑ ↓ / W S · ترتيب التبديل بالزر</h3>
+<div id="verticalAxes">
+</div>
+<label>
+<input id="reverseUD" type="checkbox"> عكس الأعلى والأسفل</label>
+<div class="field">
+<label>Space</label>
+<span>فتح / إغلاق سريع</span>
+</div>
+<div class="field">
+<label>Esc</label>
+<span>إيقاف الحركة</span>
+</div>
+</section>
+</div>
+<details class="advanced-settings" id="advancedSettings">
+<summary>إعدادات متقدمة</summary>
+<div class="settings-tabs segmented">
+<button data-settings-tab="hardware" class="selected">الأجهزة</button>
+<button data-settings-tab="calibration">المعايرة</button>
+<button data-settings-tab="connection">الاتصال والتخزين</button>
+</div>
+<div class="settings-content settings-grid" data-settings-content="hardware">
+<section class="panel">
+<h2>إعدادات المقبض</h2>
+<label>
+<input id="holdMG90" type="checkbox"> تثبيت الحمل بمحركات MG90S</label>
+<p class="note">أوقف الحركة واسند الحمل قبل إلغاء التثبيت. تفعيله قد يسبب ضغطًا وسخونة؛ لا يوجد كشف انحشار.</p>
+<label class="field">موضع الإغلاق µs<input id="settingsGrip" type="number" min="810" max="1710" step="1">
+</label>
+<div id="initPanel" class="manual-speed" hidden="">
+<b>تهيئة المحرك المحدد</b>
+<p class="note">اسند الذراع؛ أول نبضة قد تحرّكه سريعًا.</p>
+<label for="initPulse">موضع البداية µs</label>
+<input id="initPulse" type="number" min="800" max="2200" step="10" value="1500">
+<p>
+<label>
+<input id="initSupported" type="checkbox"> أسندت الذراع وأستعد للحركة الأولى</label>
+</p>
+<button id="initialize" class="danger" disabled="">إرسال موضع البداية وتفعيل هذا المحرك</button>
+</div>
+<details open="" class="advanced-grip">
+<button id="arm" class="primary" disabled="">تفعيل المفصل</button>
+<label class="field" hidden="">موضع الإغلاق µs<input id="gripTarget" type="number" min="810" max="1710" step="1">
+</label>
+<div class="stack">
+<button id="gripFast" disabled="">إغلاق سريع</button>
+<button id="releaseGrip" disabled="">تحرير النبضات</button>
+</div>
+<p class="caption">تحرير النبضات قد يفلت الحمل</p>
+</details>
+</section>
+<section class="panel">
+<h2>حدود الحركة</h2>
+<label>المفصل<select id="limitJoint">
+</select>
+</label>
+<label>الحد الأدنى µs<input id="limitMin" type="number" min="500" max="2499" step="25">
+</label>
+<label>الحد الأعلى µs<input id="limitMax" type="number" min="501" max="2500" step="25">
+</label>
+<div class="row">
+<button id="limitWider">توسيع الطرفين 25 µs</button>
+<button id="limitReset">800–2200</button>
+<button id="limitApply">حفظ على اللوحة</button>
+</div>
+<p class="note">حتى 500–2500 بعد المعايرة لكل محرك. احفظ ثم اختبر حركة قصيرة؛ توقف عند الطنين أو نهاية الحركة. الأصابع ثابتة 810–1710.</p>
+<p class="note">الوضع الافتراضي يحرّر MG90S بعد 0.75 ثانية من ثبات الأمر. قد يرتخي المفصل أو يفلت الحمل.</p>
+</section>
+<section class="panel engineering-readings">
+<h2>حالة المحركات</h2>
+<div class="engineering-rows">
+<div class="row between">
+<span>القاعدة</span>
+<strong id="p0" dir="ltr">—</strong>
+<progress id="bar0" max="1400" value="0">
+</progress>
+</div>
+<div class="row between">
+<span>الكتف</span>
+<strong id="p1" dir="ltr">—</strong>
+<progress id="bar1" max="1400" value="0">
+</progress>
+</div>
+<div class="row between">
+<span>الكوع</span>
+<strong id="p2" dir="ltr">—</strong>
+<progress id="bar2" max="1400" value="0">
+</progress>
+</div>
+<div class="row between">
+<span>إمالة الرسغ</span>
+<strong id="p3" dir="ltr">—</strong>
+<progress id="bar3" max="1400" value="0">
+</progress>
+</div>
+<div class="row between">
+<span>دوران المقبض</span>
+<strong id="p4" dir="ltr">—</strong>
+<progress id="bar4" max="1400" value="0">
+</progress>
+</div>
+<div class="row between">
+<span>الأصابع</span>
+<strong id="p5" dir="ltr">—</strong>
+<progress id="bar5" max="1400" value="0">
+</progress>
+</div>
+</div>
+<span id="jointRange" class="mono">800 — 2200 µs</span>
+</section>
+</div>
+<div class="settings-content settings-grid" data-settings-content="calibration" hidden="">
+<section class="panel">
+<h2>الرسم والمحاكاة</h2>
+<label class="field">المفصل<select id="visualJoint">
+</select>
+</label>
+<label>
+<input type="checkbox" id="visualFlip"> عكس اتجاه الرسم والمحاكاة</label>
+<p class="note">يشمل نموذج 3D والرسومات الصغيرة. يظهر الفرق عند تحريك المفصل؛ وضع الأساس لا يتغيّر.</p>
+<label class="field">الموضع المرجعي µs<input id="simZero" type="number" min="800" max="2200">
+</label>
+<label class="field">حجم الحركة في الرسم / %<input id="simRange" type="number" min="10" max="200" step="5">
+</label>
+<button id="simCalibrate">مطابقة الوضع المرجعي مع الأمر الحالي</button>
+<p class="note">المحاكاة تتبع الأوامر؛ لا تقيس الزوايا الحقيقية.</p>
+</section>
+<details id="xyzDirections" class="panel" open="">
+<summary>عكس اتجاه المحاكاة</summary>
+<div class="xyz-direction-grid">
+<label>
+<input id="xyzFlip0" type="checkbox"> 1 · القاعدة</label>
+<label>
+<input id="xyzFlip1" type="checkbox"> 2 · الكتف</label>
+<label>
+<input id="xyzFlip2" type="checkbox"> 3 · الكوع</label>
+<label>
+<input id="xyzFlip3" type="checkbox"> 4 · إمالة الرسغ</label>
+<label>
+<input id="xyzFlip4" type="checkbox"> 5 · دوران المقبض</label>
+<label>
+<input id="xyzFlip5" type="checkbox"> 6 · الأصابع</label>
+</div>
+<p class="note">العكس موحّد مع الإعدادات. يظهر الفرق عند تحريك المفصل؛ وضع الأساس يبقى ثابتًا.</p>
+</details>
+<details id="xyzCalibration" open="" class="panel calibration-panel">
+<summary>معايرة الإحداثيات <span id="xyzCalCount">0 / 5</span>
+</summary>
+<p class="note">لكل مفصل: حرّكه إلى وضعين معلومين، وطابق زاوية النموذج مع الواقع ثم احفظ النبضة والزاوية لكل وضع. المعاينة تعمل قبل المعايرة؛ الحركة إلى نقطة تحتاج معايرة المحاور الخمسة.</p>
+<div class="row">
+<label>المفصل<select id="xyzCalJoint">
+</select>
+</label>
+<label>زاوية النموذج للمعايرة <span id="xyzCalAngleValue">0°</span>
+<input id="xyzCalAngle" type="range" min="-180" max="180" step="1" value="0">
+</label>
+<button id="xyzCaptureA">تسجيل الوضع A</button>
+<button id="xyzCaptureB">تسجيل الوضع B</button>
+<button id="xyzReference">عرض وضع ملف STL</button>
+<button id="xyzFollow">متابعة أوامر الروبوت</button>
+</div>
+<div class="xyz-cal-scroll">
+<table class="xyz-cal-table">
+<thead>
+<tr>
+<th>المفصل</th>
+<th>نبضة A µs</th>
+<th>زاوية A °</th>
+<th>نبضة B µs</th>
+<th>زاوية B °</th>
+<th>طابقت الواقع</th>
+</tr>
+</thead>
+<tbody id="xyzCalRows">
+</tbody>
+</table>
+</div>
+<div class="row">
+<label>تصحيح القبضة X mm<input id="xyzToolX" type="number" min="-100" max="100" value="0">
+</label>
+<label>Y mm<input id="xyzToolY" type="number" min="-100" max="100" value="0">
+</label>
+<label>Z mm<input id="xyzToolZ" type="number" min="-100" max="100" value="0">
+</label>
+<button id="xyzSaveCalibration">حفظ المعايرة</button>
+</div>
+<p class="note">زاوية الكتف تُقاس مع الجزء الواقف تحته، والكوع بين قطعتي الذراع. الأرقام هنا نسبة لمرجع المفصل المستقيم، لا لوضع ملف STL المطوي. حفظ المعايرة لا يحرك الروبوت. تثبيت الحمل يبقي العزم وقد يسبب ضغطًا وسخونة.</p>
+</details>
+</div>
+<div class="settings-content settings-grid" data-settings-content="connection" hidden="">
+<section class="panel">
+<h2>الهاتف والتخزين</h2>
+<div id="phoneSetup">
+<p>شغّل START_WINDOWS.bat على الكمبيوتر.</p>
+</div>
+<div id="storageState" class="badge">جارٍ فتح قاعدة البيانات</div>
+<button id="refreshLibrary">تحديث الحركات</button>
+</section>
+<details>
+<summary>سجل الاتصال</summary>
+<pre id="log">
+</pre>
+</details>
+</div>
+</details>
+</section>
+<section id="page-project" class="page" hidden="">
+<div class="project-hero">
+<div>
+<p class="overline">ADAM ABU TOAMY · ROBOTICS</p>
+<h1>ذراع أبنيها وأطوّرها</h1>
+<p>أطوّر ذراعًا روبوتية مطبوعة ثلاثيًا تجمع بين التجميع الميكانيكي والإلكترونيات والبرمجة. بدأت بتصميم جاهز اشتريته للطباعة، ثم بنيت حوله تجهيزاتي وبرنامج التحكم الخاص بي، بهدف الوصول إلى ذراع تستطيع التقاط أجسام ونقلها بشكل متكرر.</p>
+<span class="wip">قيد التطوير</span>
+</div>
+<div class="project-mark" aria-hidden="true">
+<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M9 40h29M16 39v-7l11-13-9-8M20 7l-5 3 4 5M30 16l6 3 3-4-3-3M29 23l4 12v4H20">
+</path>
+<circle cx="27" cy="20" r="5" fill="#e0e9d4">
+</circle>
+<circle cx="17" cy="32" r="3" fill="#e0e9d4">
+</circle>
+<path d="M5 45h38" stroke="#c0cdb1">
+</path>
+</svg>
+</div>
+</div>
+<p class="source-credit">
+<span>صاحب تصميم ملف الطباعة الأساسي:</span> <a href="https://cults3d.com/en/3d-model/gadget/brazo-robotico-con-arduino-step-files-robotic-arm-guardar-reproducir-export" target="_blank" rel="noopener">
+<strong>FABRI_CREATOR</strong>
+</a>
+<span> — اشتريت التصميم عبر Cults3D؛ تطوير هذا المشروع وتعديلاته من Adam Abu Toamy.</span>
+</p>
+<section class="panel project-section">
+<h2>فكرة المشروع</h2>
+<p>الفكرة هي بناء نظام متكامل: ذراع حقيقية على الطاولة، وواجهة بسيطة لتحريكها وتسجيل حركاتها، ثم إضافة الرؤية كي تتعرف إلى الجسم وتحدد موضعه وتقترب منه وتمسكه. التحكم اليدوي والحركات المحفوظة هما الأساس الذي أستخدمه قبل الانتقال إلى المهام الآلية.</p>
+<p>أستخدم المشروع لتطوير مهاراتي في ربط البرمجيات بالعالم الحقيقي: كيف يتحول أمر من المتصفح إلى حركة، وكيف تؤثر الميكانيكا والتغذية والمعايرة في النتيجة. لذلك أعمل على الهيكل والإلكترونيات والتحكم معًا، وأقيس التحسن على الروبوت نفسه.</p>
+</section>
+<section class="panel project-section">
+<h2>ما الذي عدّلته وطوّرته؟</h2>
+<ul class="project-list">
+<li>
+<b>البناء الميكانيكي</b>
+<span>عدّلت أجزاء ومواضع تثبيت لتناسب القطع التي أستخدمها. أراجع الأرجل والقاعدة لتجميع الإلكترونيات وتنظيم الأسلاك، وأطوّر حامل كاميرا منخفضًا يتجه نحو منطقة عمل المقبض. هذه التعديلات ما زالت نماذج قيد التجربة والتحسين.</span>
+</li>
+<li>
+<b>القطع والتوصيلات</b>
+<span>استخدمت ESP32-S3 مع مشغّل PCA9685، ومحركات من فئات 20 kg·cm وMG995 وMG90S، وتغذية 5 V / 10 A. شمل العمل تركيب المحركات والتوصيلات ومطابقة اتجاه الحركة مع الواجهة ومعايرة التجميع.</span>
+</li>
+<li>
+<b>برنامج التحكم</b>
+<span>طوّرت واجهة عربية وإنجليزية للتحكم بالمفاصل والمقبض واختيار السرعة، مع اتصال محلي بالكمبيوتر وخيار فتح التحكم من الهاتف. أعمل على جعل التشغيل اليومي واضحًا، مع إبقاء الضبط الفني منفصلًا عنه.</span>
+</li>
+<li>
+<b>تسجيل الحركات</b>
+<span>يمكن تسجيل وضعيات الذراع وترتيبها وتسميتها وحفظها كحركة، ثم إعادة تشغيلها مع ضبط الزمن والسرعة. تُحفظ الحركات في قاعدة بيانات محلية، ويمكن استيرادها وتصديرها.</span>
+</li>
+<li>
+<b>النموذج والمحاكاة</b>
+<span>أضفت رسومات للمفاصل ومعاينة للذراع ومساحة لاختيار نقطة مستهدفة، مع نموذج لحساب الحركة ومعايرتها. المعاينة تتبع الأوامر المطلوبة وليست قراءة من حساسات لزوايا الذراع.</span>
+</li>
+</ul>
+</section>
+<section class="panel project-section">
+<h2>كيف يعمل النظام؟</h2>
+<p>ترسل الواجهة طلب الحركة إلى برنامج محلي على الكمبيوتر، فيمرره عبر USB إلى ESP32-S3. يوجّه المتحكم لوحة PCA9685 التي تتحكم بالمحركات. عند استخدام الهاتف، يتصل الهاتف بالبرنامج نفسه عبر الشبكة المحلية؛ تبقى الذراع موصولة بالكمبيوتر.</p>
+<p>الحركة المحفوظة هي سلسلة وضعيات وأزمنة انتقال. يحفظ البرنامج هذه السلسلة ويعيد إرسالها عند التشغيل، بدل أن يضطر المستخدم إلى إعادة كل حركة يدويًا. يفصل هذا التنظيم بين واجهة الاستخدام وحساب الحركة وتنفيذها على العتاد.</p>
+</section>
+<section class="panel project-section">
+<h2>أين وصل المشروع؟</h2>
+<p>الذراع مجمّعة، والتحكم اليدوي والحركات المحفوظة ومعاينة الحركة موجودة في البرنامج. أواصل تحسين الملاءمة الميكانيكية وسلاسة الحركة والمعايرة، واختبار أداء القطع معًا على التجميع الفعلي.</p>
+<p>ما زال المشروع قيد العمل: لم يكتمل الالتقاط الآلي بالرؤية، ولا يوجد حاليًا قياس مباشر لزوايا المفاصل أو قوة الإمساك. لا أدّعي دقة ملليمترية مثبتة؛ دقة الوصول وثباته تُقيّمان بالتجربة على الروبوت.</p>
+</section>
+<section class="panel project-section">
+<h2>الخطوات القادمة</h2>
+<ul class="project-roadmap">
+<li>
+<b>1 · تثبيت البناء</b>
+<span>تحسين الأرجل والقاعدة وإدارة الأسلاك، وفحص التغذية وتكرار الوصول إلى نقاط معلومة.</span>
+</li>
+<li>
+<b>2 · مطابقة النموذج</b>
+<span>مطابقة الحركة المحسوبة مع حركة الذراع الفعلية، ثم تحسين الانتقال بين الوضعيات واختيار المسارات المناسبة.</span>
+</li>
+<li>
+<b>3 · تجهيز الرؤية</b>
+<span>تثبيت الكاميرا باتجاه منطقة الالتقاط، وتخصيص مسار للكابل، ومعايرة الصورة بالنسبة إلى الذراع وسطح العمل، ثم دمج حساس المسافة.</span>
+</li>
+<li>
+<b>4 · الالتقاط الآلي</b>
+<span>تحديد جسم وموضعه، الاقتراب منه، تصحيح المحاذاة، ثم الإمساك والنقل والتحقق من النتيجة. أبدأ بحلول رؤية بسيطة، وأقيّم التعلم الآلي عند وجود مهمة وبيانات تستدعيه.</span>
+</li>
+</ul>
+</section>
+<section class="panel project-section">
+<div class="panel-heading">
+<h2>صور وفيديو المشروع</h2>
+<div id="projectMediaControls" hidden="">
+<label class="button" for="projectMediaFiles">+ إضافة صور أو فيديو</label>
+<input id="projectMediaFiles" type="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/webm" multiple="" hidden="" disabled="">
+</div>
+</div>
+<div id="mediaGallery" class="media-gallery">
+</div>
+<p id="mediaStatus" class="caption" role="status">لم تُضف صور أو فيديو بعد.</p>
+</section>
+</section>
+<footer>
+<span>ADAM ABU TOAMY</span>
+<span id="saveState" hidden="">
+</span>
+</footer>
+</main>
+</div>
+<script src="i18n.js?v=43">
+</script>
+<script src="robot-view.js?v=43">
+</script>
+<script src="controller.js?v=43">
+</script>
+<script src="studio.js?v=43">
+</script>
+<script src="kinematics.js?v=43">
+</script>
+<script src="preview-model.js?v=43">
+</script>
+<script src="planner.js?v=43">
+</script>
+<script src="cartesian.js?v=43">
+</script>
+<script src="interface.js?v=43">
+</script>
+<script src="project-media.js?v=43">
+</script>
+<dialog id="phoneDialog" class="phone-dialog">
+<div class="panel-heading">
+<h2>استخدام الهاتف</h2>
+<button id="closePhoneDialog" aria-label="إغلاق">×</button>
+</div>
+<p id="phoneSharingStatus" class="caption" role="status">
+</p>
+<div id="phoneShareDetails" hidden="">
+<p class="caption">الهاتف والكمبيوتر على شبكة Wi-Fi نفسها</p>
+<img id="phoneQr" alt="رابط الهاتف" class="phone-qr">
+<div id="phoneLinks">
+</div>
+<p>
+<span>رمز الاقتران: </span>
+<strong id="phonePin" class="mono">
+</strong>
+</p>
+</div>
+<div class="row">
+<button id="enablePhone" class="primary">تفعيل استخدام الهاتف</button>
+<button id="disablePhone" class="danger" hidden="">إيقاف مشاركة الهاتف</button>
+</div>
+</dialog>
+<script src="phone-access.js?v=43">
+</script>
+
+</body>
+</html>
