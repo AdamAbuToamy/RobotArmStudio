@@ -61,6 +61,7 @@ The component list is being updated one part at a time from owner-provided detai
 | Gripper open/close servo | MG90S; all-metal gears |
 | Camera | ESP32-CAM; camera and mounting brackets are being worked on and tested |
 | Distance sensor | VL53L0X; planned for future integration |
+| Printed structure material | Currently PLA; PETG is available as an alternative if use and testing show insufficient flexibility in PLA |
 
 ## Difficulties and current work
 
