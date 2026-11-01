@@ -46,6 +46,7 @@ The component list is being updated one part at a time from owner-provided detai
 | --- | --- |
 | Controller board | ESP32-S3 N16R8 development board; Wi-Fi and Bluetooth; Arduino IDE support |
 | Servo driver | PCA9685; 16-channel, 12-bit PWM; I²C interface |
+| Servo power supply | 5 V / 10 A output; EU plug |
 | Base servo | High-torque digital servo with metal gears; product rating: 20KG |
 | Shoulder servo | MG995 standard digital servo; product rating: 15KG, 180° travel |
 | Elbow servo | MG995 standard digital servo; product rating: 15KG, 180° travel |
