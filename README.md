@@ -62,6 +62,7 @@ The component list is being updated one part at a time from owner-provided detai
 | Camera | ESP32-CAM; camera and mounting brackets are being worked on and tested |
 | Distance sensor | VL53L0X; planned for future integration |
 | Printed structure material | Currently PLA; PETG is available as an alternative if use and testing show insufficient flexibility in PLA |
+| Joints and bearings | Printed parts currently contact directly; bearing mounts have been designed and bearings are planned after friction and weak servo performance were encountered |
 
 ## Difficulties and current work
 
@@ -70,7 +71,7 @@ The component list is being updated one part at a time from owner-provided detai
 | Joint limits and direction mapping | Calibration and matching the interface to the physical arm; refinement continues |
 | Abrupt movement | Speed controls and motion smoothing are implemented in code; physical tuning remains ongoing |
 | MG90S jitter and gripper weakness | Reported during the build; no claim of a final fix or measured grasp force |
-| Friction and printed-part fit | Mechanical refinement remains ongoing |
+| Friction and weak servo performance with direct-contact printed joints | Designed bearing mounts; adding bearings is planned and their effect remains to be tested |
 | Holding a load versus releasing servo pulses | Holding/release behavior exists in the software; release timing is not stall sensing |
 
 ## Development stages
