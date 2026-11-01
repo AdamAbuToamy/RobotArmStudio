@@ -38,6 +38,10 @@ The recovered controller source includes joint and gripper control, speed select
 
 The component list is being updated one part at a time from owner-provided details.
 
+| Component | Specification |
+| --- | --- |
+| Base servo | High-torque digital servo with metal gears; product rating: 20KG |
+
 ## Difficulties and current work
 
 | Difficulty encountered | Recorded work / remaining status |
