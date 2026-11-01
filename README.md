@@ -6,53 +6,27 @@
 
 ## Media gallery
 
-**All supplied media: 4 original recordings.** Every video below has its audio track removed. Video frames were copied without re-encoding. Large recordings are presented in numbered consecutive parts; all original video packets are retained.
+**All supplied media: 4 recordings.** Audio tracks have been removed. Each complete recording is provided as one compressed H.264 file without splitting, with all frames retained.
 
 ### Videos — no audio
 
 #### 01 · 20261010_012609.mp4
 
-**Part 1 / 2**
-
-https://github.com/user-attachments/assets/94390b1b-b0bf-4650-b628-1c28aed5c8d9
-
-**Part 2 / 2**
-
-https://github.com/user-attachments/assets/2511000a-6b38-4803-ba41-1df88276ae23
+https://github.com/user-attachments/assets/9a74ace3-854d-4638-b9ac-0bdbb576daa9
 
 #### 02 · 20261010_163822.mp4
 
-**Part 1 / 3**
-
-https://github.com/user-attachments/assets/789e55f2-b3e5-430a-9eac-277c32a99121
-
-**Part 2 / 3**
-
-https://github.com/user-attachments/assets/4f5b65d3-af0b-4c19-b029-9fd77bc245b8
-
-**Part 3 / 3**
-
-https://github.com/user-attachments/assets/f68e28d5-6f75-4c38-847e-60dced0f6891
+https://github.com/user-attachments/assets/d9c08058-35b5-4dc2-bd96-0c657dcb64bc
 
 #### 03 · 20261015_194516_1.mp4
 
-**Part 1 / 3**
-
-https://github.com/user-attachments/assets/3ec7b10d-4ecd-4156-9a84-4e0bf144a0fe
-
-**Part 2 / 3**
-
-https://github.com/user-attachments/assets/6888627c-a171-4d4e-ba95-91acd07d769d
-
-**Part 3 / 3**
-
-https://github.com/user-attachments/assets/cf608265-d840-4ebc-ac46-4ebd5b87996a
+https://github.com/user-attachments/assets/d4cfe535-e3a1-4447-85e7-e06dfd3d00e5
 
 #### 04 · VID-20261010-WA0009.mp4
 
 https://github.com/user-attachments/assets/7fb0add1-2060-4b42-8d35-0cc9e5b18f95
 
-[Media inventory and processing verification](docs/MEDIA_SOURCES.md)
+[Media inventory](docs/MEDIA_SOURCES.md)
 
 ## Project and my work
 
@@ -62,18 +36,7 @@ The recovered controller source includes joint and gripper control, speed select
 
 ## Parts
 
-| Component | Documented information |
-| --- | --- |
-| Controller | ESP32-S3 |
-| Servo driver | PCA9685; firmware addresses six channels |
-| Base servo | 20 kg·cm-class servo |
-| Elbow servo | MG995 |
-| Wrist / roll / gripper | MG90S in the recorded build |
-| Servo supply | 5 V / 10 A in the recovered project documentation |
-| Structure | 3D-printed parts based on a purchased design |
-| ESP32-CAM and VL53L0X | Owned components; integration is planned, not presented as complete |
-
-The exact current shoulder servo model is not confirmed. See [component evidence](docs/COMPONENTS.md). Firmware pulse settings are commands, not sensor measurements.
+The component list is being updated one part at a time from owner-provided details.
 
 ## Difficulties and current work
 
