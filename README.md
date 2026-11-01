@@ -38,6 +38,12 @@ I assembled a servo-driven arm using a purchased mechanical design and developed
 
 The recovered controller source includes joint and gripper control, speed selection, pose/routine storage and replay, an Arabic/English interface, and optional phone access through a local computer. These are software capabilities; they are not a claim that every movement has been validated on hardware.
 
+### XYZ simulator and path planning
+
+The website includes an interactive simulator for choosing a target point in the XYZ workspace and previewing the arm's reaching pose. Inverse kinematics (IK) computes the joint configuration; the path planner uses A* within a PRM roadmap when an indirect route is needed. Work on the ESP32-CAM and its mounting brackets has started and is under testing.
+
+Executing a route on the physical arm requires a connection and calibration; the project remains work in progress.
+
 ## Parts
 
 The component list is being updated one part at a time from owner-provided details.
@@ -53,6 +59,7 @@ The component list is being updated one part at a time from owner-provided detai
 | Wrist pitch servo (up/down) | MG90S; all-metal gears |
 | Wrist roll servo | MG90S; all-metal gears |
 | Gripper open/close servo | MG90S; all-metal gears |
+| Camera | ESP32-CAM; camera and mounting brackets are being worked on and tested |
 
 ## Difficulties and current work
 
@@ -72,7 +79,9 @@ The component list is being updated one part at a time from owner-provided detai
 | Connect electronics and establish manual control | Implemented; shown in the original build recording |
 | Add calibration, saved motions and phone access | Present in the recovered software; integration testing continues |
 | Improve smoothness, grip and repeatability | In progress; no measured repeatability claimed |
-| Camera / distance-sensor integration and vision-guided picking | Planned; not complete |
+| XYZ target preview and path planning | Implemented in software; includes IK and PRM–A* planning |
+| ESP32-CAM and mounting brackets | Work started; under testing |
+| Distance-sensor integration and vision-guided picking | Planned; not complete |
 
 ## Run the controller
 
