@@ -4,6 +4,7 @@ The component list is updated one part at a time from owner-provided details.
 
 | Component | Specification |
 | --- | --- |
+| Controller board | ESP32-S3 N16R8 development board; Wi-Fi and Bluetooth; Arduino IDE support |
 | Base servo | High-torque digital servo with metal gears; product rating: 20KG |
 | Shoulder servo | MG995 standard digital servo; product rating: 15KG, 180° travel |
 | Elbow servo | MG995 standard digital servo; product rating: 15KG, 180° travel |
