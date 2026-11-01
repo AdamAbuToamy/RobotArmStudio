@@ -6,11 +6,53 @@
 
 ## Media gallery
 
-**Original build video — play below.** Uploaded as supplied, without trimming, re-encoding, generated imagery or extracted frames.
+**All supplied media: 4 original recordings.** Every video below has its audio track removed. Video frames were copied without re-encoding. Large recordings are presented in numbered consecutive parts; all original video packets are retained.
 
-https://github.com/user-attachments/assets/28c75aba-facb-49fb-a1cb-6b1d14c9c26e
+### Videos — no audio
 
-[Original video file](docs/media/VID-20261010-WA0009.mp4) · [Media source](docs/MEDIA_SOURCES.md)
+#### 01 · 20261010_012609.mp4
+
+**Part 1 / 2**
+
+https://github.com/user-attachments/assets/94390b1b-b0bf-4650-b628-1c28aed5c8d9
+
+**Part 2 / 2**
+
+https://github.com/user-attachments/assets/2511000a-6b38-4803-ba41-1df88276ae23
+
+#### 02 · 20261010_163822.mp4
+
+**Part 1 / 3**
+
+https://github.com/user-attachments/assets/789e55f2-b3e5-430a-9eac-277c32a99121
+
+**Part 2 / 3**
+
+https://github.com/user-attachments/assets/4f5b65d3-af0b-4c19-b029-9fd77bc245b8
+
+**Part 3 / 3**
+
+https://github.com/user-attachments/assets/f68e28d5-6f75-4c38-847e-60dced0f6891
+
+#### 03 · 20261015_194516_1.mp4
+
+**Part 1 / 3**
+
+https://github.com/user-attachments/assets/3ec7b10d-4ecd-4156-9a84-4e0bf144a0fe
+
+**Part 2 / 3**
+
+https://github.com/user-attachments/assets/6888627c-a171-4d4e-ba95-91acd07d769d
+
+**Part 3 / 3**
+
+https://github.com/user-attachments/assets/cf608265-d840-4ebc-ac46-4ebd5b87996a
+
+#### 04 · VID-20261010-WA0009.mp4
+
+https://github.com/user-attachments/assets/7fb0add1-2060-4b42-8d35-0cc9e5b18f95
+
+[Media inventory and processing verification](docs/MEDIA_SOURCES.md)
 
 ## Project and my work
 
