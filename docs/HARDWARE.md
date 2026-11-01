@@ -1,5 +1,13 @@
 # Hardware setup
 
+## Owner-specified components
+
+| Component | Specification |
+| --- | --- |
+| Base servo | High-torque digital servo with metal gears; product rating: 20KG |
+
+## Setup
+
 1. Wire and verify the ESP32-S3 / PCA9685 I²C connection and the servo power distribution. Use a common signal/power ground.
 2. Confirm the servo-to-channel assignment in `RobotArmStudio/RobotArmStudio.ino` against the physical arm. The current protocol handles six channels.
 3. Upload the included firmware for first-time setup. Its original project expects **USB CDC On Boot disabled** for the UART USB port in use.
