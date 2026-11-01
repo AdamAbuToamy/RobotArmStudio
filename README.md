@@ -44,6 +44,7 @@ The component list is being updated one part at a time from owner-provided detai
 | Shoulder servo | MG995 standard digital servo; product rating: 15KG, 180° travel |
 | Elbow servo | MG995 standard digital servo; product rating: 15KG, 180° travel |
 | Wrist pitch servo (up/down) | MG90S; all-metal gears |
+| Wrist roll servo | MG90S; all-metal gears |
 
 ## Difficulties and current work
 
