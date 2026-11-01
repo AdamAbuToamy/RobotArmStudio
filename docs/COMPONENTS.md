@@ -14,5 +14,6 @@ The component list is updated one part at a time from owner-provided details.
 | Wrist roll servo | MG90S; all-metal gears |
 | Gripper open/close servo | MG90S; all-metal gears |
 | Camera | ESP32-CAM; work on camera and mounting brackets has started; under testing |
+| Distance sensor | VL53L0X; planned for future integration |
 
 Firmware values describe commanded pulse widths, not measured angles. The small-servo release timer is not stall detection. Channel assignments and limits must be checked against the physical assembly; use the firmware and hardware notes together.
