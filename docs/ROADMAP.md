@@ -11,6 +11,10 @@ All stages below are work in progress unless the capability is already present i
 | 5. Vision-assisted picking | Detect a simple object, approach pose, re-image, correct, approach slowly, grasp, lift, verify and place | Success rate, endpoint error, time per attempt and categorized failures |
 | 6. Learned perception | Fine-tune an object detector/segmenter on build-specific data; evaluate error compensation | Separate train/validation/test capture sessions; precision/recall, latency and measured improvement over baseline |
 
+## Current mechanical work
+
+The joints currently use direct contact between printed parts. Friction and weak servo performance were encountered during use. The owner has designed bearing mounts and plans to add bearings; installation and its effect remain to be tested.
+
 ## Current implementation
 
 The XYZ simulator supports selecting a target point and previewing a reaching pose. IK solves the joint configuration. The planner attempts direct routes first, uses progressive Lazy PRM with A* for indirect routes, and includes an RRT-Connect fallback. These software capabilities do not establish physical positioning accuracy.
