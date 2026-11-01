@@ -4,6 +4,10 @@
 
 [العربية](README_AR.md) · [Hardware setup](docs/HARDWARE.md) · [Architecture](docs/ARCHITECTURE.md) · [Tests](TESTING.md)
 
+**[Open the controller interface — v43](https://adam-robot-arm-studio.adam-abu-toa-5116.chatgpt.site)**
+
+The interface is live and remains work in progress. Direct USB uses Chrome or Edge on a desktop computer; phone control uses the local application. The hosted interface stores saved motions in your browser.
+
 ## Media gallery
 
 **All supplied media: 4 recordings.** Audio tracks have been removed. Each complete recording is provided as one compressed H.264 file without splitting, with all frames retained.
