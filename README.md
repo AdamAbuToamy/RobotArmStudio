@@ -62,7 +62,7 @@ The component list is being updated one part at a time from owner-provided detai
 | Camera | ESP32-CAM; camera and mounting brackets are being worked on and tested |
 | Distance sensor | VL53L0X; planned for future integration |
 | Printed structure material | Currently PLA; PETG is available as an alternative if use and testing show insufficient flexibility in PLA |
-| Joints and bearings | Printed parts currently contact directly; bearing mounts have been designed and bearings are planned after friction and weak servo performance were encountered |
+| Joints and bearings | Printed parts currently contact directly; mounts have been designed for 623ZZ bearings (3 × 10 × 4 mm), with installation planned after friction and weak servo performance were encountered |
 
 ## Difficulties and current work
 
