@@ -11,6 +11,12 @@ All stages below are work in progress unless the capability is already present i
 | 5. Vision-assisted picking | Detect a simple object, approach pose, re-image, correct, approach slowly, grasp, lift, verify and place | Success rate, endpoint error, time per attempt and categorized failures |
 | 6. Learned perception | Fine-tune an object detector/segmenter on build-specific data; evaluate error compensation | Separate train/validation/test capture sessions; precision/recall, latency and measured improvement over baseline |
 
+## Current implementation
+
+The XYZ simulator supports selecting a target point and previewing a reaching pose. IK solves the joint configuration. The planner attempts direct routes first, uses progressive Lazy PRM with A* for indirect routes, and includes an RRT-Connect fallback. These software capabilities do not establish physical positioning accuracy.
+
+Work on the ESP32-CAM and its mounting brackets has started and is under testing. Vision-guided picking remains in development.
+
 ## Planned task loop
 
 Observe while the arm is still → locate object → convert to robot coordinates → find grasp and approach poses → validate path → move → re-image/correct → use distance readings for final approach → grasp/lift → verify → place.
