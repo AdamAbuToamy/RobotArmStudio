@@ -15,6 +15,7 @@
 | Gripper open/close servo | MG90S; all-metal gears |
 | Camera | ESP32-CAM; work on camera and mounting brackets has started; under testing |
 | Distance sensor | VL53L0X; planned for future integration |
+| Printed structure material | Currently PLA; PETG is available as an alternative if use and testing show insufficient flexibility in PLA |
 
 ## Setup
 
