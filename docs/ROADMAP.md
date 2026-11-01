@@ -13,7 +13,7 @@ All stages below are work in progress unless the capability is already present i
 
 ## Current mechanical work
 
-The joints currently use direct contact between printed parts. Friction and weak servo performance were encountered during use. The owner has designed bearing mounts and plans to add bearings; installation and its effect remain to be tested.
+The joints currently use direct contact between printed parts. Friction and weak servo performance were encountered during use. The owner has designed mounts for 623ZZ bearings (3 × 10 × 4 mm) and plans to install them; installation and its effect remain to be tested.
 
 ## Current implementation
 
