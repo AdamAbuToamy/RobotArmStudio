@@ -6,11 +6,53 @@
 
 ## معرض الميديا
 
-**فيديو البناء الأصلي — يمكن تشغيله هنا.** رُفع كما أرسله آدم دون قص أو إعادة ضغط أو توليد صور أو استخراج لقطات منه.
+**كل الوسائط المرسلة: 4 تسجيلات أصلية.** حُذف المسار الصوتي من كل فيديو. نُقلت إطارات الفيديو دون إعادة ترميز، وعُرضت التسجيلات الكبيرة بأجزاء متتابعة مرقمة مع الاحتفاظ بجميع بيانات الفيديو الأصلية.
 
-https://github.com/user-attachments/assets/28c75aba-facb-49fb-a1cb-6b1d14c9c26e
+### الفيديوهات — دون صوت
 
-[ملف الفيديو الأصلي](docs/media/VID-20261010-WA0009.mp4) · [مصدر الوسائط](docs/MEDIA_SOURCES.md)
+#### 01 · 20261010_012609.mp4
+
+**الجزء 1 / 2**
+
+https://github.com/user-attachments/assets/94390b1b-b0bf-4650-b628-1c28aed5c8d9
+
+**الجزء 2 / 2**
+
+https://github.com/user-attachments/assets/2511000a-6b38-4803-ba41-1df88276ae23
+
+#### 02 · 20261010_163822.mp4
+
+**الجزء 1 / 3**
+
+https://github.com/user-attachments/assets/789e55f2-b3e5-430a-9eac-277c32a99121
+
+**الجزء 2 / 3**
+
+https://github.com/user-attachments/assets/4f5b65d3-af0b-4c19-b029-9fd77bc245b8
+
+**الجزء 3 / 3**
+
+https://github.com/user-attachments/assets/f68e28d5-6f75-4c38-847e-60dced0f6891
+
+#### 03 · 20261015_194516_1.mp4
+
+**الجزء 1 / 3**
+
+https://github.com/user-attachments/assets/3ec7b10d-4ecd-4156-9a84-4e0bf144a0fe
+
+**الجزء 2 / 3**
+
+https://github.com/user-attachments/assets/6888627c-a171-4d4e-ba95-91acd07d769d
+
+**الجزء 3 / 3**
+
+https://github.com/user-attachments/assets/cf608265-d840-4ebc-ac46-4ebd5b87996a
+
+#### 04 · VID-20261010-WA0009.mp4
+
+https://github.com/user-attachments/assets/7fb0add1-2060-4b42-8d35-0cc9e5b18f95
+
+[جرد الوسائط والتحقق من حذف الصوت](docs/MEDIA_SOURCES.md)
 
 ## المشروع ومساهمتي
 
