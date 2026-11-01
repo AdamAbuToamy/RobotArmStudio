@@ -10,4 +10,4 @@ The launcher creates an owner credential. Phone links and PIN pairing return a d
 
 Use verified photos of Adam's build. Copy only selected public files to docs/media/ in the exported source, and link them from both READMEs. The export excludes the local media directory, database and session credentials. Keep private files and purchased CAD out of the public repository.
 
-Only an unchanged owner-supplied original video is bundled under docs/media/. See [media source](MEDIA_SOURCES.md).
+All four owner-supplied recordings appear in both README galleries as complete H.264 files with audio tracks removed. The WhatsApp recording is also bundled without audio under docs/media/. See [media inventory and processing](MEDIA_SOURCES.md).
