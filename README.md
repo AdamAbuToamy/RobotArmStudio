@@ -60,6 +60,7 @@ The component list is being updated one part at a time from owner-provided detai
 | Wrist roll servo | MG90S; all-metal gears |
 | Gripper open/close servo | MG90S; all-metal gears |
 | Camera | ESP32-CAM; camera and mounting brackets are being worked on and tested |
+| Distance sensor | VL53L0X; planned for future integration |
 
 ## Difficulties and current work
 
