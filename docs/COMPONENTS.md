@@ -16,5 +16,6 @@ The component list is updated one part at a time from owner-provided details.
 | Camera | ESP32-CAM; work on camera and mounting brackets has started; under testing |
 | Distance sensor | VL53L0X; planned for future integration |
 | Printed structure material | Currently PLA; PETG is available as an alternative if use and testing show insufficient flexibility in PLA |
+| Joints and bearings | Printed parts currently contact directly; bearing mounts have been designed and bearings are planned after friction and weak servo performance were encountered |
 
 Firmware values describe commanded pulse widths, not measured angles. The small-servo release timer is not stall detection. Channel assignments and limits must be checked against the physical assembly; use the firmware and hardware notes together.
