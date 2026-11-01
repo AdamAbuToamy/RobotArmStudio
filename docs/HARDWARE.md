@@ -6,6 +6,7 @@
 | --- | --- |
 | Base servo | High-torque digital servo with metal gears; product rating: 20KG |
 | Shoulder servo | MG995 standard digital servo; product rating: 15KG, 180° travel |
+| Elbow servo | MG995 standard digital servo; product rating: 15KG, 180° travel |
 
 ## Setup
 
