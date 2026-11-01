@@ -6,53 +6,27 @@
 
 ## معرض الميديا
 
-**كل الوسائط المرسلة: 4 تسجيلات أصلية.** حُذف المسار الصوتي من كل فيديو. نُقلت إطارات الفيديو دون إعادة ترميز، وعُرضت التسجيلات الكبيرة بأجزاء متتابعة مرقمة مع الاحتفاظ بجميع بيانات الفيديو الأصلية.
+**كل الوسائط المرسلة: 4 تسجيلات.** حُذفت المسارات الصوتية من جميع الفيديوهات. كل تسجيل كامل مضغوط بصيغة H.264 في ملف واحد دون تقسيم، مع الاحتفاظ بجميع إطاراته.
 
 ### الفيديوهات — دون صوت
 
 #### 01 · 20261010_012609.mp4
 
-**الجزء 1 / 2**
-
-https://github.com/user-attachments/assets/94390b1b-b0bf-4650-b628-1c28aed5c8d9
-
-**الجزء 2 / 2**
-
-https://github.com/user-attachments/assets/2511000a-6b38-4803-ba41-1df88276ae23
+https://github.com/user-attachments/assets/9a74ace3-854d-4638-b9ac-0bdbb576daa9
 
 #### 02 · 20261010_163822.mp4
 
-**الجزء 1 / 3**
-
-https://github.com/user-attachments/assets/789e55f2-b3e5-430a-9eac-277c32a99121
-
-**الجزء 2 / 3**
-
-https://github.com/user-attachments/assets/4f5b65d3-af0b-4c19-b029-9fd77bc245b8
-
-**الجزء 3 / 3**
-
-https://github.com/user-attachments/assets/f68e28d5-6f75-4c38-847e-60dced0f6891
+https://github.com/user-attachments/assets/d9c08058-35b5-4dc2-bd96-0c657dcb64bc
 
 #### 03 · 20261015_194516_1.mp4
 
-**الجزء 1 / 3**
-
-https://github.com/user-attachments/assets/3ec7b10d-4ecd-4156-9a84-4e0bf144a0fe
-
-**الجزء 2 / 3**
-
-https://github.com/user-attachments/assets/6888627c-a171-4d4e-ba95-91acd07d769d
-
-**الجزء 3 / 3**
-
-https://github.com/user-attachments/assets/cf608265-d840-4ebc-ac46-4ebd5b87996a
+https://github.com/user-attachments/assets/d4cfe535-e3a1-4447-85e7-e06dfd3d00e5
 
 #### 04 · VID-20261010-WA0009.mp4
 
 https://github.com/user-attachments/assets/7fb0add1-2060-4b42-8d35-0cc9e5b18f95
 
-[جرد الوسائط والتحقق من حذف الصوت](docs/MEDIA_SOURCES.md)
+[Media inventory](docs/MEDIA_SOURCES.md)
 
 ## المشروع ومساهمتي
 
@@ -62,18 +36,7 @@ https://github.com/user-attachments/assets/7fb0add1-2060-4b42-8d35-0cc9e5b18f95
 
 ## القطع
 
-| القطعة | المعلومات الموثقة |
-| --- | --- |
-| المتحكم | ESP32-S3 |
-| مشغّل السيرفو | PCA9685؛ البرنامج يتعامل مع ست قنوات |
-| محرك القاعدة | سيرفو من فئة 20 kg·cm |
-| محرك المرفق | MG995 |
-| الرسغ والدوران والمقبض | MG90S في التجميع الموصوف |
-| تغذية السيرفو | 5V / 10A وفق توثيق الكود المسترجع |
-| الهيكل | قطع مطبوعة ثلاثيًا مبنية على تصميم مشترى |
-| ESP32-CAM وVL53L0X | قطع موجودة؛ دمجها مخطط له وليس مكتملًا |
-
-موديل محرك الكتف الحالي غير محسوم. التفاصيل في [سجل القطع](docs/COMPONENTS.md). قيم نبضات السيرفو أوامر تحكم وليست قراءات حساسات.
+تُحدّث قائمة القطع بالتتابع وفق التفاصيل التي يقدّمها صاحب المشروع.
 
 ## الصعوبات والعمل الجاري
 
